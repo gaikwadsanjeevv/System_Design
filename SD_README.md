@@ -44,7 +44,7 @@ Concepts aims to build systems that are reliable, effective, and maintainable.
    - To avoid such situation we have to use approach where the node process the message only one time. though it may be delivered multiple times.
    - We can use Idempotent Operation- No matter how many times you perform the operation (once or 100 times), the end result is exactly the same as if it were performed once.
       - RESTful design treats a PUT request as idempotent.  
- ![image](https://github.com/user-attachments/assets/6dc368bb-a776-40dc-a143-8c55d7dbd1d7)  
+![image](https://github.com/user-attachments/assets/6dc368bb-a776-40dc-a143-8c55d7dbd1d7)  
 
 ![image](https://github.com/user-attachments/assets/762548da-4e1f-4cd9-a4f9-760677574414)  
 ![image](https://github.com/user-attachments/assets/f63f7da1-62b4-4e1a-83e2-e614a369e206)  
@@ -82,6 +82,62 @@ Long timeout → slow system (waiting on crashed nodes).
 ⛔ Higher risk of false failure — slow (but healthy) nodes may be wrongly marked as failed.  
 📉 Can lead to unnecessary recovery actions or retries.  
 ![image](https://github.com/user-attachments/assets/6516c197-7079-4dfe-912c-0c82298a8487)  
+
+- A failure detector is the component of a node that we can use to identify other nodes that have failed.
+
+#### ⚙️ Properties of Failure Detectors (Concise)  
+Completeness: How well the detector finds actual crashed nodes.  
+Accuracy: How often it avoids false alarms (wrongly declaring a node as failed).  
+
+✅ Perfect Failure Detector  
+Detects all real failures (complete).  
+Makes no mistakes (accurate).  
+❌ Not possible in fully asynchronous systems.  
+
+#### Stateless System.  
+Doesn’t remember past requests  
+Works only with current input  
+No stored data between calls  
+Example:
+A price calculator service that gets product price and discount from other services every time — it doesn’t store anything.  
+#### `1Stateful System  
+- Remembers past interactions  
+- Keeps data like session info or user activity  
+- Future behavior may depend on past input  
+
+![image](https://github.com/user-attachments/assets/b82168f7-bc07-4db2-8e3e-76b8e66cb455)  
+
+#### Stateful System  
+- Remembers past data  
+- Stores and updates internal state  
+- Output depends on current state + input  
+Example:
+A system that stores employee ages and returns the maximum age — result depends on what’s already stored.  
+
+![image](https://github.com/user-attachments/assets/3bab833a-d9c8-4930-ba59-42fd397344d8)  
+
+##### ✨ Interesting Observations  
+✅ Stateful systems are powerful because computers can store and process large amounts of data better than humans.  
+⚙️ Maintaining state adds complexity: deciding storage, processing, backups, syncing, etc.  
+🏗️ Best practice:  
+Keep stateless components for business logic.  
+Use stateful components separately for data storage.  
+
+📈 Benefits of Stateless Systems Over Stateful Systems  
+✅ Easier to design, build, and scale.  
+🔄 All servers are identical, so traffic can be balanced easily.  
+🚀 Scaling (adding/removing servers) is simple.  
+But:  
+❌ Stateful systems are harder:  
+Different servers store different data.   
+Extra work needed for syncing and routing correctly.  
+
+##### 🚀 Scalability  
+Scalability means the ability to handle larger datasets and workloads by adding more resources (like servers or CPUs).  
+It helps go beyond the limits of a single machine.  
+⚙️ How to Achieve Scalability:  
+A main technique is partitioning — splitting data or tasks into smaller pieces that can be processed in parallel across multiple systems.  
+
 
 
 
