@@ -1,4 +1,4 @@
-# System_Design
+# System Design  
 Concepts aims to build systems that are reliable, effective, and maintainable.  
 
 - System design borrows many great concepts from distributed systems. Apart from distributed systems, some basic concepts on computer networking and operating systems are also helpful before taking this course.  
@@ -19,6 +19,18 @@ Concepts aims to build systems that are reliable, effective, and maintainable.
 
 - We can define the correctness of a system in terms of the properties it must satisfy.
   - Safety property  
-  - Liveness property
+  - Liveness property  
   There are some problems that make it physically impossible to satisfy both kinds of properties. So, we need to compromise some liveness properties to maintain safety.
+
+- we need a common framework to solve problems generically Making a generic model  
+- To create a model of a distributed system, we must define several properties it must satisfy. If we prove an algorithm is correct for this model, we can be sure that it’ll also be correct for all the systems that satisfy these properties.
+
+- The **main important properties in a distributed system** concern the following:  
+  - How the nodes of a distributed system interact with each other  
+  - How the nodes of a distributed system can fail  
+- **Categories of distributed systems**  
+ - Synchronous systems- all nodes run in lock-step.  
+ - Asynchronous systems- all nodes run at independent rates, there is no fixed upper bound on how long it takes for a node to deliver a message.
+   - Note: The asynchronous model is closer to real-life distributed systems
+
 
