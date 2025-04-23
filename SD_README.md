@@ -5,7 +5,10 @@ Concepts aims to build systems that are reliable, effective, and maintainable.
 
 ## distributed system  
 - A distributed system is a system whose components are located on different networked computers, which communicate and coordinate their actions by passing messages to one another.  
-![image](https://github.com/user-attachments/assets/88b0b155-2a48-41ec-9956-95f33c734608)  
+![image](https://github.com/user-attachments/assets/88b0b155-2a48-41ec-9956-95f33c734608)
+
+<img src="https://github.com/user-attachments/assets/88b0b155-2a48-41ec-9956-95f33c734608" alt="image" width="300" height="200">
+
 - Performance is the degree to which a software system or component meets its objectives for timeliness.  
 - Scalability is the capability of a system, network, or process to handle a growing amount of work, or its potential to be enlarged to accommodate that growth.  
   - If we build a distributed system, we can split and store the data in multiple computers, and distribute the processing work.  
