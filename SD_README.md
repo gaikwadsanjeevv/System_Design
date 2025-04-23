@@ -192,6 +192,11 @@ A node is a physical or virtual machine/server (or a database instance) that sto
 
 <img src="https://github.com/user-attachments/assets/80f3548b-e94a-45b0-93c5-8aaef1a1dc98" alt="image" width="70%" height=" ">  
 
+<img src="https://github.com/user-attachments/assets/a6f826ca-db8e-46eb-a412-63c643d8b00c" alt="image" width="70%" height=" ">    
+
+<img src="https://github.com/user-attachments/assets/ea1914ca-7725-4f26-82e0-0485efb847ef" alt="image" width="70%" height=" ">     
+
+<img src="https://github.com/user-attachments/assets/f70f465d-1210-40fa-8429-a0b4bc8dea5b" alt="image" width="70%" height=" ">  
 
 
 
