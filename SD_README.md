@@ -15,44 +15,43 @@ Concepts aims to build systems that are reliable, effective, and maintainable.
 - Redundancy is one of the widely used mechanisms to achieve higher availability. It refers to storing data into multiple, redundant computers. So, when one computer fails, we can efficiently switch to another one. This way, we’ll prevent our customers from experiencing this failure.  
 
 - To help Developers build better systems, Scientists created a collection of false assumptions.  
-<img src="https://github.com/user-attachments/assets/67e62a6c-2456-471d-b360-a15f9e6b664f" alt="image" width="85%" height=" ">  
-- **Network asynchrony**, **partial failures**, and **concurrency** are the major contributors to complexity in the field of distributed systems, making distributed systems challenging.
+<img src="https://github.com/user-attachments/assets/67e62a6c-2456-471d-b360-a15f9e6b664f" alt="image" width="85%" height=" ">
 
-- We can define the correctness of a system in terms of the properties it must satisfy.
+- **Network asynchrony**, **partial failures**, and **concurrency** are the major contributors to complexity in the field of distributed systems, making distributed systems challenging.  
+- We can define the correctness of a system in terms of the properties it must satisfy.  
   - Safety property  
   - Liveness property  
-  There are some problems that make it physically impossible to satisfy both kinds of properties. So, we need to compromise some liveness properties to maintain safety.
-
+  There are some problems that make it physically impossible to satisfy both kinds of properties. So, we need to compromise some liveness properties to maintain safety.  
 - we need a common framework to solve problems generically Making a generic model  
-- To create a model of a distributed system, we must define several properties it must satisfy. If we prove an algorithm is correct for this model, we can be sure that it’ll also be correct for all the systems that satisfy these properties.
+- To create a model of a distributed system, we must define several properties it must satisfy. If we prove an algorithm is correct for this model, we can be sure that it’ll also be correct for all the systems that satisfy these properties.  
 
 - The **main important properties in a distributed system** concern the following:  
   - How the nodes of a distributed system interact with each other  
   - How the nodes of a distributed system can fail  
 - **Categories of distributed systems**  
  - Synchronous systems- all nodes run in lock-step.  
- - Asynchronous systems- all nodes run at independent rates, there is no fixed upper bound on how long it takes for a node to deliver a message.
-   - Note: The asynchronous model is closer to real-life distributed systems
-### Common Types of Failures.  
-<img src="https://github.com/user-attachments/assets/b661698f-daa8-42b8-a104-bec9fe104ee7" alt="image" width="75%" height=" ">  
-- In **Fail-Stop** - node remain halted permanantely and other node detects it.
-- In **Crash** A node halts, but silently. So, other nodes may not be able to detect this state. It can only identify when they communicate with it.
-- In **Omission** A node fails to respond to incoming requests.
+ - Asynchronous systems- all nodes run at independent rates, there is no fixed upper bound on how long it takes for a node to deliver a message.  
+   - Note: The asynchronous model is closer to real-life distributed systems  
+### Common Types of Failures.   
+<img src="https://github.com/user-attachments/assets/b661698f-daa8-42b8-a104-bec9fe104ee7" alt="image" width="75%" height=" ">   
+
+- In **Fail-Stop** - node remain halted permanantely and other node detects it.  
+- In **Crash** A node halts, but silently. So, other nodes may not be able to detect this state. It can only identify when they communicate with it.  
+- In **Omission** A node fails to respond to incoming requests.  
 - **Byzantine failures** occur when a node does not behave according to its specific protocol or algorithm. This usually happens when a malicious actor or a software bug compromises the node.  
 
 ### Exactly-Once Semantics  
-- Multiple deliveries of a message: There might be a case for sending multiple messages due to network issue, but it could be a problem when it comes to bank trasfers, one bank may charge twice.
-   - To avoid such situation we have to use approach where the node process the message only one time. though it may be delivered multiple times.
-   - We can use Idempotent Operation- No matter how many times you perform the operation (once or 100 times), the end result is exactly the same as if it were performed once.
-      - RESTful design treats a PUT request as idempotent.   
-<img src="https://github.com/user-attachments/assets/6dc368bb-a776-40dc-a143-8c55d7dbd1d7" alt="image" width="85%" height=" ">  
-<img src="https://github.com/user-attachments/assets/762548da-4e1f-4cd9-a4f9-760677574414" alt="image" width="85%" height=" ">  
-<img src="https://github.com/user-attachments/assets/f63f7da1-62b4-4e1a-83e2-e614a369e206" alt="image" width="85%" height=" ">  
-
+- Multiple deliveries of a message: There might be a case for sending multiple messages due to network issue, but it could be a problem when it comes to bank trasfers, one bank may charge twice.  
+   - To avoid such situation we have to use approach where the node process the message only one time. though it may be delivered multiple times.  
+   - We can use Idempotent Operation- No matter how many times you perform the operation (once or 100 times), the end result is exactly the same as if it were performed once.  
+      - RESTful design treats a PUT request as idempotent.    
+<img src="https://github.com/user-attachments/assets/6dc368bb-a776-40dc-a143-8c55d7dbd1d7" alt="image" width="75%" height=" ">  
+<img src="https://github.com/user-attachments/assets/762548da-4e1f-4cd9-a4f9-760677574414" alt="image" width="75%" height=" ">  
+<img src="https://github.com/user-attachments/assets/f63f7da1-62b4-4e1a-83e2-e614a369e206" alt="image" width="75%" height=" ">  
 
 ### ✅ De-duplication (Simple Explanation)  
 In the de-duplication approach, each message has a unique ID.  
-If the same message is sent again (retried), it will still have the same ID.  
+If the same message is sent again (retried), it will still have the same ID.    
 The receiver checks if it has already processed that ID.  
 If yes, it skips processing again.  
 This avoids duplicate actions like sending the same email multiple times.  
@@ -112,7 +111,8 @@ A price calculator service that gets product price and discount from other servi
 - Output depends on current state + input  
 Example:
 A system that stores employee ages and returns the maximum age — result depends on what’s already stored.  
-<img src="https://github.com/user-attachments/assets/3bab833a-d9c8-4930-ba59-42fd397344d8" alt="image" width="85%" height=" ">  
+<img src="https://github.com/user-attachments/assets/3bab833a-d9c8-4930-ba59-42fd397344d8" alt="image" width="70%" height=" ">
+
 ##### ✨ Interesting Observations  
 ✅ Stateful systems are powerful because computers can store and process large amounts of data better than humans.  
 ⚙️ Maintaining state adds complexity: deciding storage, processing, backups, syncing, etc.  
