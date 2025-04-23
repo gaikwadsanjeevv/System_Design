@@ -134,6 +134,59 @@ Scalability means the ability to handle larger datasets and workloads by adding 
 It helps go beyond the limits of a single machine.  
 ⚙️ How to Achieve Scalability:  
 A main technique is partitioning — splitting data or tasks into smaller pieces that can be processed in parallel across multiple systems.  
+##### There are two different variations of partitioning:  
+Vertical partitioning & Horizontal partitioning (or sharding)  
+<img src="https://github.com/user-attachments/assets/b27db598-adce-4cc3-bc07-0adf764c16a4" alt="image" width="70%" height=" ">  
+
+**🧩 What is a Node?**  
+A node is a single computer or server in a network or distributed system.  
+In a database cluster (e.g., MongoDB, Cassandra), each node stores part of the data.  
+Nodes communicate with each other to answer queries and perform operations.  
+Example: Netflix might store user profiles on Node A, and watch history on Node B.  
+
+**🔹 Vertical Partitioning**  
+What it is: Splitting a table by columns into smaller tables.  
+Why: To store related columns separately and reduce data size per table.  
+How: Use joins to link tables back together.  
+Example: One table stores Name, Age, another stores Address, Phone.  
+Note: This is similar to normalization, but vertical partitioning can go beyond that, even on already normalized data.  
+
+Limitation: Joins across tables (and nodes) become slower.
+
+**🔹 Horizontal Partitioning (Sharding)**  
+What it is: Splitting a table by rows into smaller subsets.  
+Why: To spread data across multiple machines for scalability.  
+How: Split rows using criteria like student surname A–M and N–Z.  
+Benefit: Each node handles only part of the data, improving performance and scalability.  
+Limitation:  
+Hard to maintain transactions across nodes.  
+Range queries may still need multiple nodes.  
+⚠️ Trade-offs in Partitioning  
+Vertical partitioning: Easier joins locally but complex in distributed systems.  
+Horizontal partitioning: Scales better, but transactions and range queries across nodes are harder.  
+No perfect solution — we must choose based on system needs. 
+
+**Conclusion**  
+Vertical partitioning is a data modeling technique done by engineers, often independent of the storage system. Horizontal partitioning, on the other hand, is a core feature of distributed databases and requires engineers to understand the system's internal workings. Hence, the focus is usually on horizontal partitioning.  
+🧮 What is Normalization?  
+Normalization is the process of organizing a database to reduce data redundancy and improve data integrity.  
+Involves breaking a big table into smaller related tables.  
+Uses foreign keys to connect them.  
+
+**⚙️ What is Sharding (Horizontal Partitioning)?**  
+Sharding is a database architecture pattern where data is split by rows across multiple servers (nodes).   
+Used for scalability and faster access in large systems.  
+Each shard (node) holds part of the data.  
+✅ Example:    
+Netflix stores users whose names start with A-M on Shard 1, and N-Z on Shard 2.  
+
+#### Netflix and Uber (Horizontal + Vertical Partitioning) Sample  
+<img src="https://github.com/user-attachments/assets/d34ca718-f97e-49d9-9fc2-7dcded7c13af" alt="image" width="70%" height=" ">  
+
+
+
+
+
 
 
 
