@@ -5,7 +5,7 @@ Concepts aims to build systems that are reliable, effective, and maintainable.
 
 ## Distributed system  
 - A distributed system is a system whose components are located on different networked computers, which communicate and coordinate their actions by passing messages to one another.  
-<img src="https://github.com/user-attachments/assets/88b0b155-2a48-41ec-9956-95f33c734608" alt="image" width="75%" height=" ">
+<img src="https://github.com/user-attachments/assets/88b0b155-2a48-41ec-9956-95f33c734608" alt="image" width="85%" height=" ">  
 
 - Performance is the degree to which a software system or component meets its objectives for timeliness.  
 - Scalability is the capability of a system, network, or process to handle a growing amount of work, or its potential to be enlarged to accommodate that growth.  
@@ -15,7 +15,7 @@ Concepts aims to build systems that are reliable, effective, and maintainable.
 - Redundancy is one of the widely used mechanisms to achieve higher availability. It refers to storing data into multiple, redundant computers. So, when one computer fails, we can efficiently switch to another one. This way, we’ll prevent our customers from experiencing this failure.  
 
 - To help Developers build better systems, Scientists created a collection of false assumptions.  
-<img src="https://github.com/user-attachments/assets/67e62a6c-2456-471d-b360-a15f9e6b664f" alt="image" width="75%" height=" ">
+<img src="https://github.com/user-attachments/assets/67e62a6c-2456-471d-b360-a15f9e6b664f" alt="image" width="85%" height=" ">  
 - **Network asynchrony**, **partial failures**, and **concurrency** are the major contributors to complexity in the field of distributed systems, making distributed systems challenging.
 
 - We can define the correctness of a system in terms of the properties it must satisfy.
@@ -34,7 +34,7 @@ Concepts aims to build systems that are reliable, effective, and maintainable.
  - Asynchronous systems- all nodes run at independent rates, there is no fixed upper bound on how long it takes for a node to deliver a message.
    - Note: The asynchronous model is closer to real-life distributed systems
 ### Common Types of Failures.  
-<img src="https://github.com/user-attachments/assets/b661698f-daa8-42b8-a104-bec9fe104ee7" alt="image" width="75%" height=" ">
+<img src="https://github.com/user-attachments/assets/b661698f-daa8-42b8-a104-bec9fe104ee7" alt="image" width="75%" height=" ">  
 - In **Fail-Stop** - node remain halted permanantely and other node detects it.
 - In **Crash** A node halts, but silently. So, other nodes may not be able to detect this state. It can only identify when they communicate with it.
 - In **Omission** A node fails to respond to incoming requests.
@@ -45,9 +45,9 @@ Concepts aims to build systems that are reliable, effective, and maintainable.
    - To avoid such situation we have to use approach where the node process the message only one time. though it may be delivered multiple times.
    - We can use Idempotent Operation- No matter how many times you perform the operation (once or 100 times), the end result is exactly the same as if it were performed once.
       - RESTful design treats a PUT request as idempotent.   
-<img src="https://github.com/user-attachments/assets/6dc368bb-a776-40dc-a143-8c55d7dbd1d7" alt="image" width="75%" height=" ">
-<img src="https://github.com/user-attachments/assets/762548da-4e1f-4cd9-a4f9-760677574414" alt="image" width="75%" height=" ">
-<img src="https://github.com/user-attachments/assets/f63f7da1-62b4-4e1a-83e2-e614a369e206" alt="image" width="75%" height=" ">
+<img src="https://github.com/user-attachments/assets/6dc368bb-a776-40dc-a143-8c55d7dbd1d7" alt="image" width="85%" height=" ">  
+<img src="https://github.com/user-attachments/assets/762548da-4e1f-4cd9-a4f9-760677574414" alt="image" width="85%" height=" ">  
+<img src="https://github.com/user-attachments/assets/f63f7da1-62b4-4e1a-83e2-e614a369e206" alt="image" width="85%" height=" ">  
 
 
 ### ✅ De-duplication (Simple Explanation)  
@@ -82,7 +82,7 @@ Long timeout → slow system (waiting on crashed nodes).
 ✅ Faster failure detection — system doesn’t wait long for crashed nodes.  
 ⛔ Higher risk of false failure — slow (but healthy) nodes may be wrongly marked as failed.  
 📉 Can lead to unnecessary recovery actions or retries.  
-<img src="https://github.com/user-attachments/assets/6516c197-7079-4dfe-912c-0c82298a8487" alt="image" width="75%" height=" ">
+<img src="https://github.com/user-attachments/assets/6516c197-7079-4dfe-912c-0c82298a8487" alt="image" width="85%" height=" ">  
 - A failure detector is the component of a node that we can use to identify other nodes that have failed.
 
 #### ⚙️ Properties of Failure Detectors (Concise)  
@@ -104,7 +104,7 @@ A price calculator service that gets product price and discount from other servi
 - Remembers past interactions  
 - Keeps data like session info or user activity  
 - Future behavior may depend on past input    
-<img src="https://github.com/user-attachments/assets/b82168f7-bc07-4db2-8e3e-76b8e66cb455" alt="image" width="300" height="200">
+<img src="https://github.com/user-attachments/assets/b82168f7-bc07-4db2-8e3e-76b8e66cb455" alt="image" width="85%" height="">  
 
 #### Stateful System  
 - Remembers past data  
@@ -112,7 +112,7 @@ A price calculator service that gets product price and discount from other servi
 - Output depends on current state + input  
 Example:
 A system that stores employee ages and returns the maximum age — result depends on what’s already stored.  
-<img src="https://github.com/user-attachments/assets/3bab833a-d9c8-4930-ba59-42fd397344d8" alt="image" width="75%" height=" ">
+<img src="https://github.com/user-attachments/assets/3bab833a-d9c8-4930-ba59-42fd397344d8" alt="image" width="85%" height=" ">  
 ##### ✨ Interesting Observations  
 ✅ Stateful systems are powerful because computers can store and process large amounts of data better than humans.  
 ⚙️ Maintaining state adds complexity: deciding storage, processing, backups, syncing, etc.  
