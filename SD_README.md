@@ -111,7 +111,7 @@ A price calculator service that gets product price and discount from other servi
 - Output depends on current state + input  
 Example:
 A system that stores employee ages and returns the maximum age — result depends on what’s already stored.  
-<img src="https://github.com/user-attachments/assets/3bab833a-d9c8-4930-ba59-42fd397344d8" alt="image" width="70%" height=" ">
+<img src="https://github.com/user-attachments/assets/3bab833a-d9c8-4930-ba59-42fd397344d8" alt="image" width="50%" height=" ">
 
 ##### ✨ Interesting Observations  
 ✅ Stateful systems are powerful because computers can store and process large amounts of data better than humans.  
@@ -182,6 +182,17 @@ Netflix stores users whose names start with A-M on Shard 1, and N-Z on Shard 2.
 
 #### Netflix and Uber (Horizontal + Vertical Partitioning) Sample  
 <img src="https://github.com/user-attachments/assets/d34ca718-f97e-49d9-9fc2-7dcded7c13af" alt="image" width="70%" height=" ">  
+
+🔹 What is a Shard?  
+A shard is a subset of data from a large dataset—split horizontally by rows—and stored separately for performance and scalability.  
+
+🔹 What is a Node?  
+A node is a physical or virtual machine/server (or a database instance) that stores and processes a shard.  
+✅ So: A shard is data, and a node is hardware/software that holds that data.  
+
+<img src="https://github.com/user-attachments/assets/80f3548b-e94a-45b0-93c5-8aaef1a1dc98" alt="image" width="70%" height=" ">  
+
+
 
 
 
