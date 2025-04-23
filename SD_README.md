@@ -1,7 +1,7 @@
 # System Design  
 Concepts aims to build systems that are reliable, effective, and maintainable.  
 
-- System design borrows many great concepts from distributed systems. Apart from distributed systems, some basic concepts on computer networking and operating systems are also helpful before taking this course.  
+- System design borrows many great concepts from **distributed systems**. Apart from distributed systems, some basic concepts on **computer networking** and **operating systems** are also helpful before taking this course.  
 
 ## distributed system  
 - A distributed system is a system whose components are located on different networked computers, which communicate and coordinate their actions by passing messages to one another.  
@@ -37,7 +37,7 @@ Concepts aims to build systems that are reliable, effective, and maintainable.
 - In **Fail-Stop** - node remain halted permanantely and other node detects it.
 - In **Crash** A node halts, but silently. So, other nodes may not be able to detect this state. It can only identify when they communicate with it.
 - In **Omission** A node fails to respond to incoming requests.
-- **Byzantine failures**q occur when a node does not behave according to its specific protocol or algorithm. This usually happens when a malicious actor or a software bug compromises the node.  
+- **Byzantine failures** occur when a node does not behave according to its specific protocol or algorithm. This usually happens when a malicious actor or a software bug compromises the node.  
 
 ### Exactly-Once Semantics  
 - Multiple deliveries of a message: There might be a case for sending multiple messages due to network issue, but it could be a problem when it comes to bank trasfers, one bank may charge twice.
@@ -86,21 +86,21 @@ Long timeout → slow system (waiting on crashed nodes).
 - A failure detector is the component of a node that we can use to identify other nodes that have failed.
 
 #### ⚙️ Properties of Failure Detectors (Concise)  
-Completeness: How well the detector finds actual crashed nodes.  
-Accuracy: How often it avoids false alarms (wrongly declaring a node as failed).  
+- Completeness: How well the detector finds actual crashed nodes.  
+- Accuracy: How often it avoids false alarms (wrongly declaring a node as failed).  
 
 ✅ Perfect Failure Detector  
-Detects all real failures (complete).  
-Makes no mistakes (accurate).  
+- Detects all real failures (complete).  
+- Makes no mistakes (accurate).  
 ❌ Not possible in fully asynchronous systems.  
 
 #### Stateless System.  
-Doesn’t remember past requests  
-Works only with current input  
-No stored data between calls  
+- Doesn’t remember past requests  
+- Works only with current input  
+- No stored data between calls  
 Example:
 A price calculator service that gets product price and discount from other services every time — it doesn’t store anything.  
-#### `1Stateful System  
+#### Stateful System  
 - Remembers past interactions  
 - Keeps data like session info or user activity  
 - Future behavior may depend on past input  
