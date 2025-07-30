@@ -198,6 +198,19 @@ A node is a physical or virtual machine/server (or a database instance) that sto
 
 <img src="https://github.com/user-attachments/assets/f70f465d-1210-40fa-8429-a0b4bc8dea5b" alt="image" width="70%" height=" ">  
 
+----------------------------------------------------------------------------------------------------------------------------  
+#### System in reality improve over iterations. We often start with something simple and when the bottleneck arises one or other new design become necessary.  
+
+**** Recommended is 2 iteration at first to start with.  
+- Software Developer must know system design- once data is passed from front end handelling data at back end is crucial.
+- System Design may have multiple possible soultions.
+- You may be give real time application buidling like whats aap, which has many features but in interview the time is less so we can produce some core functionality according to interviewer question.
+- Best Pactcice = Solidify the requirement --> Scope the problem --> Engage the Interviewer.
+- Responsibility of Designer : we need to provide fault tolerance at design level because modern systems use shelf components and have millios of such component if something is breaking down, we need to hide the undesirable reality from the customer.
+### FUndamental concepts in system design interview.  
+#### a) PACELC Theorem  
+
+
 
 
 
