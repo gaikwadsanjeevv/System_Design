@@ -1,9 +1,0 @@
-## 1. Scalability
-
-- The ability of a system to handle increasing workloads efficiently. There are two types:
-
-- Horizontal Scaling: Adding more machines (like hiring more employees in a factory) to share the load.
-
-- Vertical Scaling: Upgrading existing machines (like giving an employee better tools) to handle more work.
-
-- A good system should be designed with scalability in mind to prevent bottlenecks as demand grows.
