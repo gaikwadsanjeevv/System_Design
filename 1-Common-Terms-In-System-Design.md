@@ -31,7 +31,8 @@
 ### 6. API Gateway  
 
 - Acts as a traffic controller for APIs, deciding which requests go where and ensuring smooth communication between services. Similar to a receptionist directing visitors to different offices.  
-- API gateways also provide security features like rate limiting and authentication.  
+- API gateways also provide security features like rate limiting and authentication.
+- We can do Rate Kimiting in API gateway.   
 
 ### 7. Rate Limiting  
 
@@ -41,8 +42,31 @@
 ### 8. Stateful vs. Stateless Systems
 
 - Stateful System: Maintains data between requests (like remembering your login session on a website).
-- Stateless System: Doesn’t retain data between requests (like a vending machine that serves each user independently). Stateless systems are easier to scale in distributed environments.
+- Stateless System: Doesn’t retain data between requests (like a vending machine that serves each user independently). Stateless systems are easier to scale in distributed environments. we use Token to again login back to system.  
 
+### 9. Database Sharding  
+
+- Splits a huge database into smaller, more manageable pieces so that queries run faster. Similar to dividing a school into multiple classrooms instead of cramming all students into one room.  
+
+- Sharding helps improve database performance and horizontal scalability.  
+
+### 10. Replication  
+
+- Makes copies of important data in multiple places so it's safe if one copy is lost. Similar to having multiple backups of your important documents.  
+
+- Replication ensures high availability and fault tolerance.  
+
+### 11. Event-Driven Architecture  
+
+Triggers automatic actions when something happens, like a doorbell ringing when pressed or an email notification when you receive a message.  
+
+This architecture helps decouple services and improves responsiveness.  
+  
+### 12. Message Queue  
+
+Stores tasks in a queue and processes them one by one, ensuring no request is lost. Similar to waiting in line at a school cafeteria.  
+
+Message queues help in building scalable and fault-tolerant systems.  
 
 
   
